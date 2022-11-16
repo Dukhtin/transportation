@@ -1,0 +1,79 @@
+.ssv-app-bar {
+  background: rgb(218, 199, 199);
+}
+
+.sheet-dev {
+  position: fixed;
+  left: 56px;
+  top: 45px;
+  width: 100%;
+  height: 100%;
+  /* background-size: cover;
+   background-image: url('@/assets/dbg.png');
+  */
+}
+
+.card-header {
+  padding: 15px;
+  font-size: 2.0rem;
+  background: rgb(245, 230, 230);
+}
+
+.sicon-dev {
+  color: rgb(143, 12, 12);
+}
+
+.btn-dev {
+  color: #fff;
+  background: linear-gradient(315deg, rgb(155, 140, 140) 25%, rgb(219, 203, 203));
+  border: none;
+  left: 40px;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.phone-dev {
+  font-size: 1.0rem;
+  width: 40%;
+  color: rgb(255, 255, 255);
+  background-color: rgb(211, 170, 170);
+}
+
+.div-dev {
+  width: 55%;
+  font-size: 1.1rem;
+  margin: 5px;
+  padding: 5px;
+  background-color: rgb(238, 231, 231);
+}
+
+.modal-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.39);
+}
+
+.modal {
+  background: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  min-width: 420px;
+  max-width: 580px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.menutbl-dev {
+  background: rgb(151, 32, 32);
+}
+
+.v-icon {
+  left: 5px;
+}

@@ -1,6 +1,5 @@
 # transportation
-описание проекта
-Одностраничное (SPA) web-приложение
+Описание проекта: одностраничное (SPA) web-приложение 
 Основная задача приложения - показать владение стеком технологий 
 
 Планируемый функционал: прием заявок на оказание транспортных услуг
@@ -10,29 +9,29 @@
 
 
 ## BACKEND
-''' стек: node.js,Express,PostgreSQL,sequelize '''
+### стек: node.js,Express,PostgreSQL,sequelize 
 
-Описание структуры:
-./app/config - конфигурация/подключение
-   возможно использование других СУБД (MySQL,MSSQL) изменение dialect (db.config.js)
-./app/models - структура(модель) БД
-  при запуске сервера - синхронизация 
-./app/routes - маршрутизация
-./app/controllers - API
-
-Инсталляция node_modules: npm install
-Запуск сервера: $node server
-
-
-FRONTEND
-стек: node.js,vue,vue-router,vuetify,vuex,axios
-
-Описание структуры:
-./src/components - компоненты
-./src/data    - данные используемые в интерфейсе (напр. описание главного меню)
-./src/router  - маршрутизация
-./src/services- вызов API
-./src/store   - переменные состояния vuex-хранилища
-./src/styles  - описание стилей
-./src/views   - основные странцы приложения
-./src/temp    - данные для временных решений (напр. png - должны храниться в базе или хранилище и приходить с backend)
+Описание структуры:  
+./app/config - конфигурация/подключение   
+   возможно использование других СУБД (MySQL,MSSQL) изменение dialect (db.config.js)   
+./app/models - структура(модель) БД 
+  при запуске сервера - синхронизация   
+./app/routes - маршрутизация  
+./app/controllers - API    
+   
+Инсталляция node_modules: npm install  
+Запуск сервера: $node server  
+   
+   
+## FRONTEND
+### стек: node.js,vue,vue-router,vuetify,vuex,axios
+   
+Описание структуры:  
+./src/components - компоненты 
+./src/data    - данные используемые в интерфейсе (напр. описание главного меню)  
+./src/router  - маршрутизация 
+./src/services- вызов API  
+./src/store   - переменные состояния vuex-хранилища   
+./src/styles  - описание стилей  
+./src/views   - основные странцы приложения  
+./src/temp    - данные для временных решений (напр. png - должны храниться в базе или хранилище и приходить с backend)  

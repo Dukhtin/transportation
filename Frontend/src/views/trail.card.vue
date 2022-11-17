@@ -14,7 +14,7 @@
         <v-text-field v-model='mtrail.trail_date' type="date" label="Дата"></v-text-field>
         <v-text-field v-model='mtrail.trail_time' type="time" label="Время"></v-text-field>
       </v-row> 
-        <v-select v-model="mtrail.brand" label="Авто"/>
+        <v-select v-model="mtrail.brand" label="Авто"  :items="cars" item-value="id" item-text="name"/>
         <v-select v-model="mtrail.gnumber" label="Госномер"/>
         <v-select v-model="mtrail.fio" label="Водитель"/>
       </v-card>
@@ -65,8 +65,7 @@ import Vue from 'vue';
 import trailApi from "@/services/trails.services.js";
 import demandApi from "@/services/demands.services.js";
 
-//import accApi from "@/services/accounts.services.js";
-//import parametersApi from "@/services/parameters.services.js";
+import carsApi from "@/services/cars.services.js";
 import rectable from '@/components/mixins/rectable.mixin.js';
 
 export default Vue.extend({
@@ -81,6 +80,8 @@ export default Vue.extend({
     isChange:false,
     message :"Данные были изменены, но не сохранены. Сохранить?",
     stype:{},
+    cars:[],
+    tipcar:1,    // легк, груз - должно опред. по типу заявки
     sstatus:{},
     ssourse:{},
     mtrail: {},
@@ -90,13 +91,11 @@ export default Vue.extend({
   }),
   created(){
      // набираем значения связанных справочников  - перенести в  store  
-//  parametersApi.getlist(1)                 // типы     заявок
-//  .then((response) => { this.stype = response.data })
-//  parametersApi.getlist(2)                 // статус
-//  .then((response) => { this.sstatus = response.data })
-//  parametersApi.getlist(3)                 // источник     заявок
-//  .then((response) => { this.ssource = response.data })
-      trailApi.getrec(this.Objrow.id)           // получаем все поля выбранной записи 
+    carsApi.getlist(this.tipcar)                 // авто
+    .then((response) => { 
+      this.cars = response.data
+    })
+    trailApi.getrec(this.Objrow.id)           // получаем все поля выбранной записи 
       .then((response) => {
         this.mtrail    = response.data
       })
